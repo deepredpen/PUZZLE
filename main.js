@@ -1,11 +1,27 @@
 enchant();
 
+window.onload = function(){
+    var game = new Game(800, 600);
+    game.fps = 60;
+
+    game.onload = function(){
+        var msg = new Label("root Scene");
+        msg.x = 400;
+        msg.y = 200;
+
+        game.rootScene.backgroundColor = "#FFFFFF";
+        game.rootScene.addChild(msg);
+    };
+    game.start();
+};
+
 /*
 Core
 - rootScene
 -- Sprite (cube)
 */
 
+/*
 var Coordinate = function(x, y){
     this.x = x;
     this.y = y;
@@ -97,3 +113,4 @@ window.onload = function(){
     }
     core.start();
 };
+*/
