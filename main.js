@@ -11,6 +11,12 @@ window.onload = function(){
 
         game.rootScene.backgroundColor = "#FFFFFF";
         game.rootScene.addChild(msg);
+
+        novel = createNovelScene();
+
+        game.rootScene.addEventListener('touchstart', function() {
+            game.pushScene(novel);
+        });
     };
     game.start();
 };
